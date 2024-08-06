@@ -1,0 +1,22 @@
+############# PROPERTIES #############
+service:
+  name: admin-floor-plan-service
+  version: 0.0.1
+
+spring:
+  profiles:
+    active: local
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/admin-plan
+    username: admin
+    password: admin
+
+server:
+  port: 9090
+
+############# LOGS ############
+logging:
+  level:
+    root: info
