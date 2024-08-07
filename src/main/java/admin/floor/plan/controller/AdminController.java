@@ -1,7 +1,7 @@
 package admin.floor.plan.controller;
 
 import admin.floor.plan.model.Floor;
-import admin.floor.plan.model.FloorPlanRequest;
+//import admin.floor.plan.model.FloorPlanRequest;
 import admin.floor.plan.model.Room;
 import admin.floor.plan.service.AdminService;
 import java.util.List;
@@ -16,9 +16,9 @@ public class AdminController {
   private final AdminService adminService;
 
   // Endpoint to upload a floor plan
-  @PostMapping("/floor-plan/upload")
-  public List<Floor> uploadFloorPlan(@RequestBody FloorPlanRequest request, @RequestParam("floorName") String floorName) {
-    return adminService.uploadFloorPlan(request, floorName);
+  @PostMapping("/floor")
+  public List<Floor> addFloor( @RequestParam("floorName") String floorName) {
+    return adminService.addFloor(floorName);
   }
 
   // Endpoint to add a room to a floor

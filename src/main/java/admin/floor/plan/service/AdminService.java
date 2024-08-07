@@ -3,7 +3,7 @@ package admin.floor.plan.service;
 import static java.util.UUID.randomUUID;
 
 import admin.floor.plan.model.Floor;
-import admin.floor.plan.model.FloorPlanRequest;
+//import admin.floor.plan.model.FloorPlanRequest;
 import admin.floor.plan.model.Room;
 import admin.floor.plan.repository.FloorRepository;
 import admin.floor.plan.repository.RoomRepository;
@@ -24,7 +24,7 @@ public class AdminService {
   private final FloorRepository floorRepository;
   private final RoomRepository roomRepository;
 
-  public List<Floor> uploadFloorPlan(FloorPlanRequest request, String floorName) {
+  public List<Floor> addFloor( String floorName) {
 
     Floor floor = Floor.builder().floorId(randomUUID()).floorName(floorName).build();
     floor.setFloorName(floorName);
